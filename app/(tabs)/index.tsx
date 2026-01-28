@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { StyleSheet } from "react-native";
 
 import { ThemedText } from "@/components/themed-text";
@@ -11,7 +12,6 @@ export default function Index() {
   const singleTap = Gesture.Tap()
     .onEnd(() => {
       tapped.value = tapped.value === false ? true : false;
-      console.log('Now tapped is ' + tapped.value);
     });
 
   const viewStyle = useAnimatedStyle(() => {
@@ -25,6 +25,7 @@ export default function Index() {
     <GestureDetector gesture={singleTap}>
       <ThemedView style={[styles.titleContainer, viewStyle]}>
         <ThemedText type="title" >How are you feeling today?</ThemedText>
+        <Link href={"/not-ok"} style={styles.button}>Not Ok</Link>
       </ThemedView>
     </GestureDetector>
   );
@@ -36,5 +37,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20
-  }
+  },
+  button: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
 });
