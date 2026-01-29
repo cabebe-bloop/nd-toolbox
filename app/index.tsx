@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
@@ -25,6 +25,7 @@ export default function Index() {
     <GestureDetector gesture={singleTap}>
       <ThemedView style={[styles.titleContainer, viewStyle]}>
         <ThemedText type="title" >How are you feeling today?</ThemedText>
+        <View style={styles.fillerView}/>
         <Link href={"/not-ok"} style={styles.button}>Not Ok</Link>
       </ThemedView>
     </GestureDetector>
@@ -43,4 +44,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff'
   },
+  fillerView: {
+    height: '20%'
+  }
 });
