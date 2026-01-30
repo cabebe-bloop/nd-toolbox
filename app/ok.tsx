@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 
-export default function notOkScreen() {
-const titleText = "I'm not OK";
+export default function okScreen() {
+  const titleText = "I'm OK :)";
 
   return (
     <ThemedView style={styles.titleContainer}>
@@ -15,7 +15,7 @@ const titleText = "I'm not OK";
 const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
-    backgroundColor: 'darkorange',
+    backgroundColor: 'green',
     justifyContent: 'center',
     alignItems: 'center',
   }

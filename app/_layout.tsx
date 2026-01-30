@@ -19,6 +19,14 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="ok"
+        options={{
+          title: 'Ok',
+          headerShown: false,
+          animation: 'slide_from_left'
+        }}
+      />
     </Stack>
   </GestureHandlerRootView>
   );

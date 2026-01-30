@@ -26,6 +26,7 @@ export default function Index() {
       <ThemedView style={[styles.titleContainer, viewStyle]}>
         <ThemedText type="title" >How are you feeling today?</ThemedText>
         <View style={styles.fillerView}/>
+        <Link href={"/ok"} style={styles.button}>I am Ok</Link>
         <Link href={"/not-ok"} style={styles.button}>Not Ok</Link>
       </ThemedView>
     </GestureDetector>
@@ -42,7 +43,11 @@ const styles = StyleSheet.create({
   button: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff',
+    borderRadius: 50,
+    padding: 12,
+    borderColor: 'white', // not showing up
+    textAlign: 'center'
   },
   fillerView: {
     height: '20%'
