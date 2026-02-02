@@ -24,7 +24,15 @@ export default function RootLayout() {
         options={{
           title: 'Ok',
           headerShown: false,
-          animation: 'slide_from_left'
+          animation: 'slide_from_left',
+        }}
+      />
+      <Stack.Screen
+        name="energy-check"
+        options={{
+          title: 'energy-check',
+          headerShown: false,
+          animation: 'fade_from_bottom',
         }}
       />
     </Stack>

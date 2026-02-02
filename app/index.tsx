@@ -16,7 +16,7 @@ export default function Index() {
 
   const viewStyle = useAnimatedStyle(() => {
     return {
-      backgroundColor: tapped.value ? 'royalblue' : 'tomato'
+      backgroundColor: tapped.value ? 'royalblue' : 'dodgerblue'
       
     };
   });
